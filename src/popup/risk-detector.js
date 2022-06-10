@@ -5,6 +5,7 @@ function externalLinks(){
       return HTMLtag.href || HTMLtag.src; 
     }
   )
+  return {"links": links, "count": links.length};
 }
 
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
