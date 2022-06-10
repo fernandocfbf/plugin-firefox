@@ -7,25 +7,26 @@
     "description": "Get some possible risks on the active tab",
   
     "icons": {
-      "48": "icons/icon-48.png"
+      "48": "src/icons/icon-48.png"
     },
 
     "browser_action": {
-        "default_icon": "icons/icon-48.png",
+        "default_icon": "src/icons/icon-48.png",
         "default_title": "Risk Detector",
-        "default_popup": "popup/risk-detector.html"
+        "default_popup": "src/html/risk-detector.html"
     },
 
     "permissions": [
         "tabs",
         "cookies",
-        "<all_urls>"
+        "<all_urls>",
+        "storage"
     ],
   
     "content_scripts": [
       {
-        "matches": ["*://*.mozilla.org/*"],
-        "js": ["risk-detector.js"]
+        "matches": ["*://*/*"],
+        "js": ["src/popup/risk-detector.js"]
       }
     ]
   

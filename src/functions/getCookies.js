@@ -1,8 +1,7 @@
-function getActiveTab(){
+async function getActiveTab(){
     /*returns the current tab infromation*/
-    return browser.tabs.query({currentWindow: true, active: true});
+    return await browser.tabs.query({currentWindow: true, active: true});
 }
-
 
 function isFirstParty(url, cookie){
     /* returns true if an cookie is first party and false if it's not*/
@@ -25,8 +24,9 @@ async function getCookies(tabs){
             isPersistent(cookie) ? tabInformation['persistent']+=1 : tabInformation['session']+=1;
         }        
     })   
-    console.log(tabInformation)
     return tabInformation;
 }
 
-getActiveTab().then(getCookies);
+var currentTab = getActiveTab().then((tabs) => {
+    const cookies = getCookies([...tabs]);
+});
