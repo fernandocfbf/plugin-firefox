@@ -8,11 +8,33 @@ function externalLinks(){
   return {"links": links, "count": links.length};
 }
 
+function getCanvasFingerPrint(){
+  /*
+    return the user canvas fingerprint
+    source: https://github.com/fingerprintjs/fingerprintjs
+  */
+  const fpPromise = import('https://openfpcdn.io/fingerprintjs/v3/esm.min.js')
+    .then(FingerprintJS => FingerprintJS.load());
+
+  fpPromise
+    .then(fp => fp.get())
+    .then(result => {
+      const visitorId = result.visitorId;
+      console.log(visitorId);
+    })
+}
+
+
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     switch (request.method) {
       case "connections":
         sendResponse({ 
           data: externalLinks() 
+        });
+        break;
+      case "fingerprint":
+        sendResponse({ 
+          data: getCanvasFingerPrint() 
         });
         break;
       default:
