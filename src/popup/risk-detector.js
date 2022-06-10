@@ -14,6 +14,11 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
           data: externalLinks() 
         });
         break;
+      case "localStorage":
+        sendResponse({ 
+          data: Object.entries(localStorage) 
+        });
+        break;
       default:
         sendResponse({ 
           data: null 

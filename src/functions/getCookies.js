@@ -29,4 +29,5 @@ async function getCookies(tabs){
 
 var currentTab = getActiveTab().then((tabs) => {
     const cookies = getCookies([...tabs]);
+   
 });
