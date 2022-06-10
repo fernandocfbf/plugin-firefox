@@ -1,0 +1,26 @@
+{
+
+    "manifest_version": 2,
+    "name": "risk-detector",
+    "version": "1.0",
+  
+    "description": "Get some possible risks on the active tab",
+  
+    "icons": {
+      "48": "icons/icon-48.png"
+    },
+
+    "browser_action": {
+        "default_icon": "icons/icon-48.png",
+        "default_title": "Risk Detector",
+        "default_popup": "popup/risk-detector.html"
+      },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["risk-detector.js"]
+      }
+    ]
+  
+  }
