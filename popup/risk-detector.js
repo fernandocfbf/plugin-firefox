@@ -18,14 +18,14 @@ async function getCookies(tabs){
     /* returns an object with information about the tab's cookies*/
     const tab = tabs.pop();
     const execute = browser.cookies.getAll({url: tab.url});
-    var tabInformation = {"firstParty": 0, "thirdParty": 0, "sessionParty": 0, "persistentParty": 0}
+    var tabInformation = {"firstParty": 0, "thirdParty": 0, "session": 0, "persistent": 0}
     await execute.then((cookies) => {
-        console.log(cookies);
         for (const cookie of cookies){
             isFirstParty(tab.url, cookie) ? tabInformation['firstParty']+=1 : tabInformation['thirdParty']+=1;
-            isPersistent(cookie) ? tabInformation['persistentParty']+=1 : tabInformation['sessionParty']+=1;
+            isPersistent(cookie) ? tabInformation['persistent']+=1 : tabInformation['session']+=1;
         }        
     })   
+    console.log(tabInformation)
     return tabInformation;
 }
 
