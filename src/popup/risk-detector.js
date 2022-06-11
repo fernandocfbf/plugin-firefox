@@ -32,11 +32,25 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
           data: externalLinks() 
         });
         break;
+
+      case "localStorage":
+        sendResponse({ 
+          data: Object.entries(localStorage) 
+        });
+        break;
+
       case "fingerprint":
         sendResponse({ 
           data: getCanvasFingerPrint() 
         });
         break;
+        
+      case "sessionStorage":
+        sendResponse({ 
+          data: Object.entries(sessionStorage) 
+        });
+        break;
+
       default:
         sendResponse({ 
           data: null 

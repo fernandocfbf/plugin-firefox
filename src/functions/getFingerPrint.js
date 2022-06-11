@@ -7,7 +7,7 @@ async function getFingerPrint(tabs){
     /*gets the user fingerprint*/
     const tab = tabs.pop();
     const finger = await browser.tabs.sendMessage(tab.id, {method: "fingerprint"});
-    console.log(finger);
+    // console.log(finger);
 }
 
 var currentTab = getActiveTab().then((tabs) => {

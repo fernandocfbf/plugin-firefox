@@ -1,4 +1,66 @@
-html, body {
-    height: 200px;
-    width: 500px
+html,body {
+    height: 400px;
+    width: 500px;
+    /* background-color: brown; */
 }
+
+body {
+    background-color: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #my-pie-chart-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #my-pie-chart {
+    background: conic-gradient(rgb(238, 255, 0) 2.00%, black 0.00% 5.55%, blue 0.55% 6.08%,  rgb(255, 0, 200) 0.55% 10.08%, rgb(65, 217, 255) 0.55% 60.08%);
+    border-radius: 50%;
+      width: 150px;
+      height: 150px;
+  }
+  
+  #legenda {
+    margin-left: 20px;
+    background-color: white;
+    padding: 5px;
+  }
+  
+  .entry {
+    display: flex;
+    align-items: center;
+  }
+  
+  .entry-color {
+      height: 10px;
+      width: 10px;
+  }
+  
+  .entry-text {
+    margin-left: 5px;
+  }
+  
+  #color-yellow {
+    background-color: yellow;
+  }
+  
+  #color-blue {
+    background-color: blue;
+  }
+  
+  #color-black {
+    background-color: black;
+  }
+  
+  #color-rosa {
+    background-color: rgb(255, 0, 200);
+  }
+  #color-azul-claro {
+    background-color: rgb(65, 217, 255);
+  }
+  
+  
