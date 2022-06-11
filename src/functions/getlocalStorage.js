@@ -16,8 +16,6 @@ async function getThirdPartyConnections(tabs){
 
 var currentTab = getActiveTab().then((tabs) => {
     const connections = getThirdPartyConnections([...tabs]);
-    console.log("ooo");
-    console.log(connections);
 });
 
 /*
