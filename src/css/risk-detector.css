@@ -13,13 +13,13 @@ html,body {
     margin-top: 50px;
     margin-left: 200px;
     /* (A2) SEGMENTS */
-    background: conic-gradient(
+    /* background: conic-gradient(
       rgb(255, 0, 212) 0deg 72deg,
       rgb(124, 0, 128) 72deg 144deg,
       rgb(0, 30, 128) 144deg 216deg,
       rgb(0, 204, 255) 216deg 288deg,
       rgb(251, 255, 0) 288deg 360deg
-    );
+    ); */
   }
 
 /* (B) DONUT "CONVERSION" */

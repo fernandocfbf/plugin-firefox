@@ -12,12 +12,12 @@
         <!-- <progress value="10" max="100"></progress> -->
 
         <!-- (A) DONUT CHART https://code-boxx.com/donut-chart-html-css/ -->
-        <div class="donut"><div class="hole"><p id = "score" class="score">100</p></div></div>
+        <div class="donut" id = "donut" style="background: conic-gradient(rgb(255, 0, 212) 0deg 72deg,rgb(124, 0, 128) 72deg 144deg,rgb(0, 30, 128) 144deg 216deg,rgb(0, 204, 255) 216deg 288deg,rgb(251, 255, 0) 288deg 360deg);"><div class="hole"><p id = "score" class="score">100</p></div></div>
         <!-- (B) LEGEND -->
         <div class="legend">
-          <div class="segment1"></div> <div>Connections</div>
-          <div class="segment2"></div> <div>Cookies</div>
-          <div class="segment3"></div> <div>FingerPrint</div>
+          <div class="segment1"></div> <div>Connections<p id = "Connect">0 </p></div>
+          <div class="segment2"></div> <div>Cookies<p id = "Cookies">0 </p></div>
+          <div class="segment3"></div> <div>FingerPrint<p id = "FingerPrint">0 </p></div>
           <div class="segment4"></div> <div >LocalStorage <p id = "LolcalS">0 </p></div>
           <div class="segment5"></div> <div >SessionStorage <p id = "SessionS">0 </p></div>
         </div>
