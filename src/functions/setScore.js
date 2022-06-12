@@ -8,9 +8,20 @@ async function calculeScore(tabs){
     var ScoreConnections = parseInt(document.getElementById('Connect').innerHTML);
     var donut = document.getElementById('donut');
    
-    var scoreValue =Scorecookies + ScorelocalStorage +ScoresessionStorage + Scorefingerprint + ScoreConnections;
+    var scoreValue = 100 - Scorecookies - ScorelocalStorage -ScoresessionStorage - Scorefingerprint - ScoreConnections;
 
     score.innerHTML = scoreValue;
+
+    if (scoreValue>70){
+        //bomm
+        score.setAttribute('style',"color: green;");
+    }else if(scoreValue<70 && scoreValue>=50){
+        //medio
+        score.setAttribute('style',"color: orange;");
+    }else{
+        //ruim
+        score.setAttribute('style',"color: red;");
+    }
 
         if(ScoreConnections != 0){
             var porcentagem_ScoreConnections   = ScoreConnections  / (scoreValue/100);
@@ -59,4 +70,4 @@ setTimeout(() => {
     getActiveTab().then((tabs) => {
         const connections = calculeScore([...tabs]);
     });
-  }, 100);
+  }, 200);
