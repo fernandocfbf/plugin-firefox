@@ -4,18 +4,15 @@ async function getActiveTab(){
     return await browser.tabs.query({currentWindow: true, active: true});
 }
 
-async function getThirdPartyConnections(tabs){
+async function getLocalStorage(tabs){
     const tab = tabs.pop();
     const listenners = await browser.tabs.sendMessage(tab.id, {method: "localStorage"});
-    console.log("OI");
-    console.log(listenners.data);
-    console.log(listenners.data.length);
-
-    return listenners
+    console.log("LocalStorage executed!");
+    return listenners;
 }
 
 var currentTab = getActiveTab().then((tabs) => {
-    const connections = getThirdPartyConnections([...tabs]);
+    const localStorage = getLocalStorage([...tabs]);
 });
 
 /*

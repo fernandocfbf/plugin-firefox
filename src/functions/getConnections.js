@@ -7,6 +7,7 @@ async function getThirdPartyConnections(tabs){
     /*get all third party connections*/
     const tab = tabs.pop();
     const listenners = await browser.tabs.sendMessage(tab.id, {method: "connections"});
+    console.log("Connections executed!");
 }
 
 var currentTab = getActiveTab().then((tabs) => {

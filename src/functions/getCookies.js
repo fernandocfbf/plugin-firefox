@@ -24,6 +24,7 @@ async function getCookies(tabs){
             isPersistent(cookie) ? tabInformation['persistent']+=1 : tabInformation['session']+=1;
         }        
     })   
+    console.log("Cookies executed!");
     return tabInformation;
 }
 
