@@ -7,6 +7,8 @@ async function getActiveTab(){
 async function getLocalStorage(tabs){
     const tab = tabs.pop();
     const listenners = await browser.tabs.sendMessage(tab.id, {method: "localStorage"});
+    var score_local = document.getElementById('LolcalS');
+    score_local.innerHTML =  listenners.data.length ;
     console.log("LocalStorage executed!");
     return listenners;
 }

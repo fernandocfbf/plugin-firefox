@@ -7,41 +7,52 @@
         <div>
             Qualquer coisa aqui!
         </div>
+       
+
+        <!-- <progress value="10" max="100"></progress> -->
+
+        <!-- (A) DONUT CHART https://code-boxx.com/donut-chart-html-css/ -->
+        <div class="donut"><div class="hole"><p id = "score" class="score">100</p></div></div>
+        <!-- (B) LEGEND -->
+        <div class="legend">
+          <div class="segment1"></div> <div>Connections</div>
+          <div class="segment2"></div> <div>Cookies</div>
+          <div class="segment3"></div> <div>FingerPrint</div>
+          <div class="segment4"></div> <div >LocalStorage <p id = "LolcalS">0 </p></div>
+          <div class="segment5"></div> <div >SessionStorage <p id = "SessionS">0 </p></div>
+        </div>
+
+        <div id="my-pie-chart-container">
+          <div id="my-pie-chart"></div>
+        
+          <div id="legenda">
+            <div class="entry">
+              <div id="color-black" class="entry-color"></div>
+              <div class="entry-text">firstParty</div>
+            </div>
+            <div class="entry">
+              <div id="color-blue" class="entry-color"></div>
+              <div class="entry-text">thirdParty</div>
+            </div>
+            <div class="entry">
+              <div id="color-rosa" class="entry-color"></div>
+              <div class="entry-text">session</div>
+            </div>
+            <div class="entry">
+              <div id="color-azul-claro" class="entry-color"></div>
+              <div class="entry-text">persistent</div>
+            </div>
+          </div>
+        </div>
+
         <script src="../popup/risk-detector.js"></script>
         <script src="../functions/getCookies.js"></script>
         <script src="../functions/getConnections.js"></script>
         <script src="../functions/getlocalStorage.js"></script>
         <script src="../functions/getFingerPrint.js"></script>
         <script src="../functions/getSessionStorage.js"></script>
+        <script src="../functions/setScore.js"></script>
 
-        <progress value="10" max="100"></progress>
-
-        <div id="my-pie-chart-container">
-            <div id="my-pie-chart"></div>
-          
-            <div id="legenda">
-              <div class="entry">
-                <div id="color-yellow" class="entry-color"></div>
-                <div class="entry-text">Connections</div>
-              </div>
-              <div class="entry">
-                <div id="color-black" class="entry-color"></div>
-                <div class="entry-text">Cookies</div>
-              </div>
-              <div class="entry">
-                <div id="color-blue" class="entry-color"></div>
-                <div class="entry-text">FingerPrint</div>
-              </div>
-              <div class="entry">
-                <div id="color-rosa" class="entry-color"></div>
-                <div class="entry-text">LocalStorage</div>
-              </div>
-              <div class="entry">
-                <div id="color-azul-claro" class="entry-color"></div>
-                <div class="entry-text">SessionStorage</div>
-              </div>
-            </div>
-          </div>
 
     </body>
     

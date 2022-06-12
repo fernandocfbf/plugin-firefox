@@ -1,27 +1,78 @@
 html,body {
-    height: 400px;
-    width: 500px;
+    height: 500px;
+    width: 700px;
     /* background-color: brown; */
 }
 
-body {
-    background-color: silver;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+/* (A) PIE CHART */
+.donut {
+    /* (A1) CIRCLE */
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 200px;
+    /* (A2) SEGMENTS */
+    background: conic-gradient(
+      rgb(255, 0, 212) 0deg 72deg,
+      rgb(124, 0, 128) 72deg 144deg,
+      rgb(0, 30, 128) 144deg 216deg,
+      rgb(0, 204, 255) 216deg 288deg,
+      rgb(251, 255, 0) 288deg 360deg
+    );
   }
+
+/* (B) DONUT "CONVERSION" */
+/* (B1) SMALLER CIRCLE */
+.hole {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  .score{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 60px;
+    color: green;
+  }
+   
+  /* (B2) "CONVERT PIE TO DONUT" - CENTER SMALLER CIRCLE */
+  .donut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* (C) LEGEND */
+/* (C1) LEGEND CONTAINER */
+.legend {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+   
+  /* (C2) SEGMENTS */
+  .legend div { padding: 0 10px; }
+  .segment1 { background: rgb(255, 0, 212);}
+  .segment2 { background: rgb(124, 0, 128); }
+  .segment3 { background: rgb(0, 30, 128); }
+  .segment4 { background: rgb(0, 204, 255); }
+  .segment5 { background:rgb(251, 255, 0); }
   
-  #my-pie-chart-container {
+  
+ /* GRAFICOS COOKIES */
+ #my-pie-chart-container {
+    margin-top: 30px;
     display: flex;
     align-items: center;
   }
   
   #my-pie-chart {
-    background: conic-gradient(rgb(238, 255, 0) 2.00%, black 0.00% 5.55%, blue 0.55% 6.08%,  rgb(255, 0, 200) 0.55% 10.08%, rgb(65, 217, 255) 0.55% 60.08%);
+    background: conic-gradient( black 0.00% 5.55%, blue 0.55% 6.08%,  rgb(255, 0, 200) 0.55% 10.08%, rgb(65, 217, 255) 0.55% 60.08%);
     border-radius: 50%;
-      width: 150px;
-      height: 150px;
+    width: 150px;
+    height: 150px;
   }
   
   #legenda {
@@ -44,9 +95,6 @@ body {
     margin-left: 5px;
   }
   
-  #color-yellow {
-    background-color: yellow;
-  }
   
   #color-blue {
     background-color: blue;
@@ -62,5 +110,4 @@ body {
   #color-azul-claro {
     background-color: rgb(65, 217, 255);
   }
-  
-  
+
