@@ -9,7 +9,7 @@ async function calculeScore(tabs){
     var donut = document.getElementById('donut');
    
     var scoreValue = 100 - Scorecookies - ScorelocalStorage -ScoresessionStorage - Scorefingerprint - ScoreConnections;
-
+    console.log("score: ", Scorecookies, ScorelocalStorage, ScoresessionStorage, Scorefingerprint, ScoreConnections);
     score.innerHTML = scoreValue;
 
     if (scoreValue>70){
@@ -60,7 +60,7 @@ async function calculeScore(tabs){
    
     
 
-    donut.setAttribute('style',"background: conic-gradient(rgb(255, 0, 212) 0deg "+rad_ScoreConnections.toString()+"deg,rgb(124, 0, 128) "+rad_ScoreConnections.toString()+"deg "+rad_Scorecookies.toString()+"deg,rgb(0, 30, 128) "+rad_Scorecookies.toString()+"deg "+rad_Scorefingerprint.toString()+"deg,rgb(0, 204, 255) "+rad_Scorefingerprint.toString()+"deg "+rad_localStorage.toString()+"deg,rgb(251, 255, 0) "+rad_localStorage.toString()+"deg 360deg);");
+    donut.setAttribute('style',"background: conic-gradient(rgb(65, 0, 112) 0deg "+rad_ScoreConnections.toString()+"deg,rgb(30, 0, 130) "+rad_ScoreConnections.toString()+"deg "+rad_Scorecookies.toString()+"deg,rgb(102, 0, 176) "+rad_Scorecookies.toString()+"deg "+rad_Scorefingerprint.toString()+"deg,rgb(115, 0, 255) "+rad_Scorefingerprint.toString()+"deg "+rad_localStorage.toString()+"deg,rgb(23, 0, 61) "+rad_localStorage.toString()+"deg 360deg);");
 
 }
 
@@ -68,6 +68,6 @@ async function calculeScore(tabs){
 
 setTimeout(() => {
     getActiveTab().then((tabs) => {
-        const connections = calculeScore([...tabs]);
+        const calcualte = calculeScore([...tabs]);
     });
   }, 200);
