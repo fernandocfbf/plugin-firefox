@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/risk-detector.css">
+    </head>
+    <body>
+        <div class="title">
+            <h2>Risk detector</h2>
+        </div>
+       
+
+        <!-- <progress value="10" max="100"></progress> -->
+
+        <!-- (A) DONUT CHART https://code-boxx.com/donut-chart-html-css/ -->
+        <div class="donut" id = "donut" style="background: conic-gradient(rgb(65, 0, 112) 0deg 72deg,rgb(82, 0, 140) 72deg 144deg,rgb(102, 0, 176) 144deg 216deg,rgb(115, 0, 255) 216deg 288deg,rgb(23, 0, 61) 288deg 360deg);"><div class="hole"><p id = "score" class="score">100</p></div></div>
+        <!-- (B) LEGEND -->
+        <div class="legend">
+          <div class="segment1"></div> <div class="legend_text">Connections<p id = "Connect">0 </p></div>
+          <div class="segment2"></div> <div class="legend_text">Cookies<p id = "Cookies">0 </p></div>
+          <div class="segment3"></div> <div class="legend_text">FingerPrint<p id = "FingerPrint">0 </p></div>
+          <div class="segment4"></div> <div class="legend_text">LocalStorage <p id = "LolcalS">0 </p></div>
+          <div class="segment5"></div> <div class="legend_text">SessionStorage <p id = "SessionS">0 </p></div>
+        </div>
+
+        <script src="../popup/risk-detector.js"></script>
+        <script src="../functions/getCookies.js"></script>
+        <script src="../functions/getConnections.js"></script>
+        <script src="../functions/getlocalStorage.js"></script>
+        <script src="../functions/getFingerPrint.js"></script>
+        <script src="../functions/getSessionStorage.js"></script>
+        <script src="../functions/setScore.js"></script>
+
+
+    </body>
+    
+</html>

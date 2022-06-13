@@ -1,0 +1,85 @@
+html,body {
+    height: 550px;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden
+}
+
+.title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+
+/* (A) PIE CHART */
+.donut {
+    /* (A1) CIRCLE */
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 200px;
+    /* (A2) SEGMENTS */
+    /* background: conic-gradient(
+      rgb(255, 0, 212) 0deg 72deg,
+      rgb(124, 0, 128) 72deg 144deg,
+      rgb(0, 30, 128) 144deg 216deg,
+      rgb(0, 204, 255) 216deg 288deg,
+      rgb(251, 255, 0) 288deg 360deg
+    ); */
+  }
+
+.legend_text{
+  color: black;
+}
+
+/* (B) DONUT "CONVERSION" */
+/* (B1) SMALLER CIRCLE */
+.hole {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  .score{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 60px;
+    color: green;
+  }
+   
+  /* (B2) "CONVERT PIE TO DONUT" - CENTER SMALLER CIRCLE */
+  .donut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* (C) LEGEND */
+/* (C1) LEGEND CONTAINER */
+.legend {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+   
+  /* (C2) SEGMENTS */
+  .legend div { 
+    width: 100%;
+    padding: 0 10px; }
+  .segment1 { 
+    height: 15px;
+    background: rgb(0, 76, 255);}
+  .segment2 { 
+    height: 15px;
+    background: rgb(30, 0, 130); }
+  .segment3 { 
+    height: 15px;
+    background: rgb(102, 0, 176); }
+  .segment4 { 
+    height: 15px;
+    background: rgb(115, 0, 255); }
+  .segment5 { 
+    height: 15px;
+    background:rgb(23, 0, 61); }
+  
