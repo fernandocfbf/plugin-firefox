@@ -60,7 +60,7 @@ async function calculeScore(tabs){
    
     
 
-    donut.setAttribute('style',"background: conic-gradient(rgb(65, 0, 112) 0deg "+rad_ScoreConnections.toString()+"deg,rgb(30, 0, 130) "+rad_ScoreConnections.toString()+"deg "+rad_Scorecookies.toString()+"deg,rgb(102, 0, 176) "+rad_Scorecookies.toString()+"deg "+rad_Scorefingerprint.toString()+"deg,rgb(115, 0, 255) "+rad_Scorefingerprint.toString()+"deg "+rad_localStorage.toString()+"deg,rgb(23, 0, 61) "+rad_localStorage.toString()+"deg 360deg);");
+    donut.setAttribute('style',"background: conic-gradient(rgb(0, 76, 255) 0deg "+rad_ScoreConnections.toString()+"deg,rgb(30, 0, 130) "+rad_ScoreConnections.toString()+"deg "+rad_Scorecookies.toString()+"deg,rgb(102, 0, 176) "+rad_Scorecookies.toString()+"deg "+rad_Scorefingerprint.toString()+"deg,rgb(115, 0, 255) "+rad_Scorefingerprint.toString()+"deg "+rad_localStorage.toString()+"deg,rgb(23, 0, 61) "+rad_localStorage.toString()+"deg 360deg);");
 
 }
 
